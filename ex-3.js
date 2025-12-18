@@ -33,3 +33,12 @@ let getJohnOrders = () => {
 };
 
 // Start coding here
+getJohnProfile()
+  .then((profile) => {
+    console.log(profile);
+    // Return Promise ถัดไปเพื่อให้ .then ตัวต่อไปทำงานต่อ
+    return getJohnOrders();
+  })
+  .then((orders) => {
+    console.log(orders);
+  });
