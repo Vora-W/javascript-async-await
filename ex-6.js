@@ -33,3 +33,17 @@ let getJohnOrders = () => {
 };
 
 // Start coding here
+async function asyncFn() {
+  try {
+    const displayJohnProfile = await getJohnProfile();
+    console.log(displayJohnProfile);
+
+    const displayJohnOrders = await getJohnOrders();
+    console.log(displayJohnOrders);
+
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+asyncFn();
