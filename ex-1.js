@@ -4,7 +4,7 @@ let getJohnProfile = () => {
   return new Promise(function (resolve) {
     setTimeout(
       () =>
-        resolve({
+        ve({
           name: "John",
           age: 20,
           hobbies: ["Coding", "Football"],
@@ -14,3 +14,7 @@ let getJohnProfile = () => {
   });
 };
 // Start coding here
+getJohnProfile().then((profile) =>{
+  console.log(profile);
+  
+})

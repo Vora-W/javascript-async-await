@@ -33,3 +33,10 @@ let getJohnOrders = () => {
 };
 
 // Start coding here
+getJohnProfile().then((profile) => { //ชื่อของพารามิเตอร์จะตั้งอะไรก็ได้แต่ขอให้ตั้งตรงสื่อที่ใช้จะดีที่สุด
+  console.log(profile);
+  return getJohnOrders(); //ต้อง return ออกไปด้วยตัวต่อถึงใช้ต่อได้
+})
+getJohnOrders().then((order)=>{ //คำสั่งที่ 2 ถัดจากอันบนถ้าเสร็จแล้วแสดงอันนี้ต่อ
+  console.log(order);
+})
